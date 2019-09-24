@@ -1,13 +1,13 @@
 body {
-	background: #cd5c5c;
+	background: @body;
 }
 
-h1 {
-	font-size: 25px;
-}
 .container {
 	width: 880px;
 	margin: 0 auto;
+	@media @mobile {
+		width: 90%;
+	}
 }
 
 .header-img {
@@ -15,14 +15,29 @@ h1 {
 	position: relative;
 	text-align: center;
 	font-family: 'Crimson Text', serif;
-	color: #2e0014;
+	color: @headerfont;
+	.mainimage {
+		border-radius: 50px;
+		border: double 6px @headerfont;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		width: 100%;
+	}
 }
-.mainimage {
-	border-radius: 50px;
-	border: double 6px #2e0014;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	width: 100%;
+@media @mobile {
+	.header-img {
+		width: 100%;
+		position: relative;
+		text-align: center;
+		font-family: 'Crimson Text', serif;
+		color: @headerfont;
+		.mainimage {
+			border-radius: 30px;
+			border: double 6px @headerfont;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+	}
 }
 
 h1 {
@@ -32,62 +47,80 @@ h1 {
 	transform: translate(-50%, -50%);
 	font-size: 62.5%;
 	font-size: 3.6rem;
+	@media @mobile {
+		font-size: 2.0rem;
+		left: 25%;
+		margin-left: 50px;
+		top: 85%;
+	}
 }
 
 h2 {
 	font-size: 62.5%;
 	font-size: 2.5rem;
 	font-family: 'Crimson Text', serif;
-	color: #2e0014;
-}
-.welcomep {
-	font-size: 62.5%;
-	font-size: 1.5rem;
-	font-family: 'Raleway', sans-serif;
-	margin-bottom: 30px;
+	color: @headerfont;
 }
 .welcome {
 	padding: 20px;
 	align-items: center;
 	text-align: center;
-	background: #f1dabf;
+	background: @cards;
 	border-radius: 10px;
 	height: 300px;
+
+	.welcomep {
+		font-size: 62.5%;
+		font-size: 1.5rem;
+		font-family: 'Raleway', sans-serif;
+		margin-bottom: 30px;
+	}
 }
+@media @mobile {
+	.welcome {
+		width: 90%;
+		height: 450px;
+	}
+}
+
 .reviews {
 	padding: 20px;
 	margin-top: 20px;
 	align-items: center;
 	text-align: center;
-	background: #f1dabf;
+	background: @cards;
 	border-radius: 10px;
+	.reviewp {
+		font-size: 62.5%;
+		font-size: 1.0rem;
+		font-family: 'Raleway', sans-serif;
+	}
 }
-.reviewp {
-	font-size: 62.5%;
-	font-size: 1.0rem;
-	font-family: 'Raleway', sans-serif;
+@media @mobile {
+	.reviews {
+		width: 90%;
+		height: 400px;
+	}
 }
 p {
 	margin-top: 20px;
 	font-style: italic;
 }
 button {
-	background: #558b6e;
-	color: #f1dabf;
+	background: @button;
+	color: @cards;
 	vertical-align: top;
 	padding: 8px 44px;
 	font-size: 17px;
-	border: 1px solid #2e0014;
+	border: 1px solid @headerfont;
 	border-radius: 10px;
 	cursor: pointer;
-}
-button:hover {
-	background: white;
-	color: #558b6e;
-}
-button {
 	animation: bounce 1s infinite alternate;
 	-webkit-animation: bounce 1s infinite alternate;
+	&:hover {
+		background: white;
+		color: @button;
+	}
 }
 
 @keyframes bounce {

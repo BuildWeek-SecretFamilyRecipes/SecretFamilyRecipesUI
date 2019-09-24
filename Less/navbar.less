@@ -3,7 +3,7 @@ header nav a {
 	font-size: 16px;
 	color: black;
 	&:hover {
-		text-decoration: underline #2e0014;
+		text-decoration: underline @headerfont;
 	}
 }
 
@@ -12,6 +12,11 @@ header nav a {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background: #f1dabf;
+	background: @cards;
 	border-radius: 10px;
+	@media @mobile {
+		height: 70px;
+		background: @cards;
+		border-radius: 10px;
+	}
 }
