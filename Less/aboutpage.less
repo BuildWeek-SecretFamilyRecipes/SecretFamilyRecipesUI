@@ -1,0 +1,113 @@
+body {
+	background: @body;
+}
+
+.container {
+	width: 880px;
+	margin: 0 auto;
+	@media @mobile {
+		width: 90%;
+	}
+}
+
+.about {
+	position: absolute;
+	bottom: 8%;
+	right: 1%;
+	transform: translate(-50%, -50%);
+	font-size: 62.5%;
+	font-size: 3.6rem;
+	@media @mobile {
+		font-size: 2.0rem;
+		top: 81%;
+		display: flex;
+		justify-content: flex-end;
+		margin-left: 203px;
+	}
+}
+
+h2 {
+	font-size: 62.5%;
+	font-size: 2.5rem;
+	font-family: 'Crimson Text', serif;
+	color: @headerfont;
+}
+.meet {
+	padding: 20px;
+	align-items: center;
+	text-align: center;
+	background: @cards;
+	border-radius: 10px;
+	height: 250px;
+
+	.meetp {
+		font-size: 62.5%;
+		font-size: 1.5rem;
+		font-family: 'Raleway', sans-serif;
+		margin-bottom: 30px;
+	}
+}
+@media @mobile {
+	.meet {
+		width: 90%;
+		height: 350px;
+	}
+}
+span {
+	color: @button;
+	font-weight: bolder;
+}
+.people {
+	font-size: 14px;
+	margin-top: 25px;
+	border-radius: 10px;
+	background: @cards;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	flex-direction: row;
+	.person {
+		width: 20%;
+		border-radius: 50px;
+		padding: 35px;
+	}
+}
+@media @mobile {
+	.people {
+		width: 83%;
+		display: flex;
+		flex-direction: row;
+		margin-left: 40px;
+	}
+}
+
+h3 {
+	font-size: 62.5%;
+	font-size: 1.0rem;
+	color: @headerfont;
+	font-family: 'Crimson Text', serif;
+	font-style: italic;
+	text-align: center;
+	padding-top: 40px;
+}
+h4 {
+	font-size: 62.5%;
+	font-size: 1.0rem;
+	text-decoration: underline;
+}
+.contact {
+	font-size: 62.5%;
+	font-size: .8rem;
+	color: @headerfont;
+	background: @cards;
+	margin-top: 20px;
+	border-radius: 10px;
+	width: 20%;
+	margin-left: 340px;
+	text-align: center;
+	padding: 10px;
+	@media @mobile {
+		width: 40%;
+		margin-left: 120px;
+	}
+}
