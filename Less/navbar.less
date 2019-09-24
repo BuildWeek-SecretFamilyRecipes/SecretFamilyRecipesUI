@@ -1,0 +1,22 @@
+header nav a {
+	margin-left: 50px;
+	font-size: 16px;
+	color: black;
+	&:hover {
+		text-decoration: underline @headerfont;
+	}
+}
+
+.navbar {
+	height: 70px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: @cards;
+	border-radius: 10px;
+	@media @mobile {
+		height: 70px;
+		background: @cards;
+		border-radius: 10px;
+	}
+}
