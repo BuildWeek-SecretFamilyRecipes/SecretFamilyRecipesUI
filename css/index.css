@@ -148,6 +148,12 @@ header nav a:hover {
     border-radius: 10px;
   }
 }
+@media (max-width:768px) and (min-width: 501px) {
+  .navbar {
+    width: 80%;
+    margin-left: 20px;
+  }
+}
 body {
   background: #cd5c5c;
 }
@@ -156,6 +162,11 @@ body {
   margin: 0 auto;
 }
 @media (max-width:500px) {
+  .container {
+    width: 90%;
+  }
+}
+@media (max-width:768px) and (min-width: 501px) {
   .container {
     width: 90%;
   }
@@ -173,6 +184,12 @@ body {
   margin-top: 20px;
   margin-bottom: 20px;
   width: 100%;
+}
+@media (max-width:768px) and (min-width: 501px) {
+  .header-img {
+    width: 80%;
+    margin-left: 20px;
+  }
 }
 @media (max-width:500px) {
   .header-img {
@@ -204,6 +221,13 @@ body {
     bottom: 20px;
   }
 }
+@media (max-width:768px) and (min-width: 501px) {
+  .secret {
+    font-size: 3rem;
+    right: 10px;
+    bottom: 10px;
+  }
+}
 h2 {
   font-size: 62.5%;
   font-size: 2.5rem;
@@ -223,6 +247,13 @@ h2 {
   font-size: 1.5rem;
   font-family: 'Raleway', sans-serif;
   margin-bottom: 30px;
+}
+@media (max-width:768px) and (min-width: 501px) {
+  .welcome {
+    width: 70%;
+    height: 350px;
+    margin-left: 50px;
+  }
 }
 @media (max-width:500px) {
   .welcome {
@@ -247,6 +278,12 @@ h2 {
   .reviews {
     width: 90%;
     height: 400px;
+  }
+}
+@media (max-width:768px) and (min-width: 501px) {
+  .reviews {
+    width: 70%;
+    margin-left: 50px;
   }
 }
 p {
@@ -287,6 +324,12 @@ footer {
     width: 90%;
   }
 }
+@media (max-width:768px) and (min-width: 501px) {
+  footer {
+    margin: 32px 0;
+    margin-right: 50px;
+  }
+}
 body {
   background: #cd5c5c;
 }
@@ -316,6 +359,11 @@ body {
     margin-left: 203px;
   }
 }
+@media (max-width:768px) and (min-width: 501px) {
+  .about {
+    font-size: 3rem;
+  }
+}
 h2 {
   font-size: 62.5%;
   font-size: 2.5rem;
@@ -342,9 +390,19 @@ h2 {
     height: 350px;
   }
 }
-span {
+@media (max-width:768px) and (min-width: 501px) {
+  .meet {
+    width: 70%;
+    height: 300px;
+    margin-left: 37px;
+  }
+}
+.slide {
   color: #558b6e;
   font-weight: bolder;
+  animation: slide 2s;
+  -webkit-animation: slide 2s;
+  animation-fill-mode: backwards;
 }
 .people {
   font-size: 14px;
@@ -367,6 +425,12 @@ span {
     display: flex;
     flex-direction: row;
     margin-left: 40px;
+  }
+}
+@media (max-width:768px) and (min-width: 501px) {
+  .people {
+    width: 70%;
+    margin-left: 65px;
   }
 }
 h3 {
@@ -399,5 +463,21 @@ h4 {
   .contact {
     width: 40%;
     margin-left: 120px;
+  }
+}
+@media (max-width:768px) and (min-width: 501px) {
+  .contact {
+    width: 20%;
+    margin-left: 270px;
+  }
+}
+@keyframes slide {
+  from {
+    margin-left: -50%;
+    opacity: 0;
+  }
+  to {
+    margin-right: 0;
+    opacity: 1;
   }
 }

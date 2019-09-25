@@ -25,6 +25,11 @@ body {
 		margin-left: 203px;
 	}
 }
+@media @tablet {
+	.about {
+		font-size: 3.0rem;
+	}
+}
 
 h2 {
 	font-size: 62.5%;
@@ -53,9 +58,19 @@ h2 {
 		height: 350px;
 	}
 }
-span {
+@media @tablet {
+	.meet {
+		width: 70%;
+		height: 300px;
+		margin-left: 37px;
+	}
+}
+.slide {
 	color: @button;
 	font-weight: bolder;
+	animation: slide 2s;
+	-webkit-animation: slide 2s;
+	animation-fill-mode: backwards;
 }
 .people {
 	font-size: 14px;
@@ -80,7 +95,12 @@ span {
 		margin-left: 40px;
 	}
 }
-
+@media @tablet {
+	.people {
+		width: 70%;
+		margin-left: 65px;
+	}
+}
 h3 {
 	font-size: 62.5%;
 	font-size: 1.0rem;
@@ -109,5 +129,21 @@ h4 {
 	@media @mobile {
 		width: 40%;
 		margin-left: 120px;
+	}
+}
+@media @tablet {
+	.contact {
+		width: 20%;
+		margin-left: 270px;
+	}
+}
+@keyframes slide {
+	from {
+		margin-left: -50%;
+		opacity: 0;
+	}
+	to {
+		margin-right: 0;
+		opacity: 1;
 	}
 }
