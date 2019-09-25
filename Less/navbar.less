@@ -16,7 +16,14 @@ header nav a {
 	border-radius: 10px;
 	@media @mobile {
 		height: 70px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 		background: @cards;
 		border-radius: 10px;
+	}
+	@media @tablet {
+		width: 80%;
+		margin-left: 20px;
 	}
 }

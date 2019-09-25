@@ -10,4 +10,19 @@
 @dutch-white: #f1dabf;
 @brick-red : #cd5c5c;
 // Mobile var
-@mobile: ~'(max-width:500px)';
+@mobile: ~'(max-width:500px) ';
+@tablet: ~'(max-width:768px) and (min-width: 501px) ';
+
+//buttons
+.custom-btn() {
+	background: @button;
+	color: @cards;
+	vertical-align: top;
+	padding: 8px 44px;
+	font-size: 17px;
+	border: 1px solid @headerfont;
+	border-radius: 10px;
+	cursor: pointer;
+	animation: bounce 1s infinite alternate;
+	-webkit-animation: bounce 1s infinite alternate;
+}

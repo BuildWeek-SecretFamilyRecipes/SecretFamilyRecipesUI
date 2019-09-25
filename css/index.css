@@ -138,11 +138,20 @@ header nav a:hover {
   background: #f1dabf;
   border-radius: 10px;
 }
-@media (max-width:500px) {
+@media (max-width:500px)  {
   .navbar {
     height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: #f1dabf;
     border-radius: 10px;
+  }
+}
+@media (max-width:768px) and (min-width: 501px)  {
+  .navbar {
+    width: 80%;
+    margin-left: 20px;
   }
 }
 body {
@@ -152,7 +161,12 @@ body {
   width: 880px;
   margin: 0 auto;
 }
-@media (max-width:500px) {
+@media (max-width:500px)  {
+  .container {
+    width: 90%;
+  }
+}
+@media (max-width:768px) and (min-width: 501px)  {
   .container {
     width: 90%;
   }
@@ -171,7 +185,13 @@ body {
   margin-bottom: 20px;
   width: 100%;
 }
-@media (max-width:500px) {
+@media (max-width:768px) and (min-width: 501px)  {
+  .header-img {
+    width: 80%;
+    margin-left: 20px;
+  }
+}
+@media (max-width:768px) and (min-width: 501px)  and (max-width:500px)  {
   .header-img {
     width: 100%;
     position: relative;
@@ -186,20 +206,90 @@ body {
     margin-bottom: 20px;
   }
 }
-h1 {
+.secretcard {
+  display: flex;
+}
+@media (max-width:500px)  {
+  .secretcard {
+    flex-direction: column;
+  }
+}
+@media (max-width:768px) and (min-width: 501px)  {
+  .secretcard {
+    flex-direction: column;
+  }
+}
+.secretcard .cardimage {
+  width: 60%;
+  border-radius: 60px;
+  border: double 6px #2e0014;
+  margin-top: 10px;
+  -webkit-filter: brightness(70%);
+  filter: brightness(60%);
+}
+@media (max-width:500px)  {
+  .secretcard .cardimage {
+    border-radius: 30px;
+    width: 80%;
+    margin-left: 30px;
+  }
+}
+@media (max-width:768px) and (min-width: 501px)  {
+  .secretcard .cardimage {
+    border-radius: 50px;
+    width: 50%;
+    margin-left: 150px;
+  }
+}
+h5 {
+  font-size: 62.5%;
+  font-size: 1.3rem;
+  font-family: 'Raleway', sans-serif;
+  color: #2e0014;
+  background: #f1dabf;
+  padding: 45px;
+  margin-top: 10px;
+  margin-right: 8px;
+  border-radius: 200px;
+  text-align: center;
+  font-style: italic;
+  border: solid black 2px;
+}
+@media (max-width:500px)  {
+  h5 {
+    border-radius: 100px;
+    font-size: 1rem;
+  }
+}
+@media (max-width:768px) and (min-width: 501px)  {
+  h5 {
+    border-radius: 100px;
+    padding: 10px;
+    font-size: 1.3rem;
+    width: 70%;
+    margin-left: 60px;
+  }
+}
+.secret {
   position: absolute;
   bottom: 0;
-  left: 33%;
+  right: 8%;
   transform: translate(-50%, -50%);
   font-size: 62.5%;
   font-size: 3.6rem;
 }
-@media (max-width:500px) {
-  h1 {
+@media (max-width:500px)  {
+  .secret {
     font-size: 2rem;
-    left: 25%;
-    margin-left: 50px;
-    top: 85%;
+    right: 10px;
+    bottom: 20px;
+  }
+}
+@media (max-width:768px) and (min-width: 501px)  {
+  .secret {
+    font-size: 3rem;
+    right: 10px;
+    bottom: 10px;
   }
 }
 h2 {
@@ -216,17 +306,24 @@ h2 {
   border-radius: 10px;
   height: 300px;
 }
-.welcome .welcomep {
-  font-size: 62.5%;
-  font-size: 1.5rem;
-  font-family: 'Raleway', sans-serif;
-  margin-bottom: 30px;
+@media (max-width:768px) and (min-width: 501px)  {
+  .welcome {
+    width: 70%;
+    height: 350px;
+    margin-left: 50px;
+  }
 }
-@media (max-width:500px) {
+@media (max-width:500px)  {
   .welcome {
     width: 90%;
     height: 450px;
   }
+}
+.welcomep {
+  font-size: 62.5%;
+  font-size: 1.5rem;
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 30px;
 }
 .reviews {
   padding: 20px;
@@ -236,20 +333,26 @@ h2 {
   background: #f1dabf;
   border-radius: 10px;
 }
-.reviews .reviewp {
-  font-size: 62.5%;
-  font-size: 1rem;
-  font-family: 'Raleway', sans-serif;
-}
-@media (max-width:500px) {
+@media (max-width:500px)  {
   .reviews {
     width: 90%;
     height: 400px;
   }
 }
+@media (max-width:768px) and (min-width: 501px)  {
+  .reviews {
+    width: 70%;
+    margin-left: 50px;
+  }
+}
+.reviewp {
+  font-size: 62.5%;
+  font-size: 1rem;
+  font-family: 'Raleway', sans-serif;
+  font-style: italic;
+}
 p {
   margin-top: 20px;
-  font-style: italic;
 }
 button {
   background: #558b6e;
@@ -280,8 +383,165 @@ footer {
   text-align: center;
   font-size: 14px;
 }
-@media (max-width:500px) {
+@media (max-width:500px)  {
   footer {
     width: 90%;
+  }
+}
+@media (max-width:768px) and (min-width: 501px)  {
+  footer {
+    margin: 32px 0;
+    margin-right: 50px;
+  }
+}
+body {
+  background: #cd5c5c;
+}
+.container {
+  width: 880px;
+  margin: 0 auto;
+}
+@media (max-width:500px)  {
+  .container {
+    width: 90%;
+  }
+}
+.about {
+  position: absolute;
+  bottom: 8%;
+  right: 1%;
+  transform: translate(-50%, -50%);
+  font-size: 62.5%;
+  font-size: 3.6rem;
+}
+@media (max-width:500px)  {
+  .about {
+    font-size: 2rem;
+    top: 81%;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 203px;
+  }
+}
+@media (max-width:768px) and (min-width: 501px)  {
+  .about {
+    font-size: 3rem;
+  }
+}
+h2 {
+  font-size: 62.5%;
+  font-size: 2.5rem;
+  font-family: 'Crimson Text', serif;
+  color: #2e0014;
+}
+.meet {
+  padding: 20px;
+  align-items: center;
+  text-align: center;
+  background: #f1dabf;
+  border-radius: 10px;
+  height: 250px;
+}
+@media (max-width:500px)  {
+  .meet {
+    width: 90%;
+    height: 350px;
+  }
+}
+@media (max-width:768px) and (min-width: 501px)  {
+  .meet {
+    width: 70%;
+    height: 300px;
+    margin-left: 37px;
+  }
+}
+.meet .meetp {
+  font-size: 62.5%;
+  font-size: 1.5rem;
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 30px;
+}
+.slide {
+  color: #558b6e;
+  font-weight: bolder;
+  animation: slide 2s;
+  -webkit-animation: slide 2s;
+  animation-fill-mode: backwards;
+}
+.people {
+  font-size: 14px;
+  margin-top: 25px;
+  border-radius: 10px;
+  background: #f1dabf;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-direction: row;
+}
+@media (max-width:500px)  {
+  .people {
+    width: 83%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 40px;
+  }
+}
+@media (max-width:768px) and (min-width: 501px)  {
+  .people {
+    width: 70%;
+    margin-left: 65px;
+  }
+}
+.people .person {
+  width: 20%;
+  border-radius: 50px;
+  padding: 35px;
+}
+h3 {
+  font-size: 62.5%;
+  font-size: 1rem;
+  color: #2e0014;
+  font-family: 'Crimson Text', serif;
+  font-style: italic;
+  text-align: center;
+  padding-top: 40px;
+}
+h4 {
+  font-size: 62.5%;
+  font-size: 1rem;
+  text-decoration: underline;
+}
+.contact {
+  font-size: 62.5%;
+  font-size: 0.8rem;
+  color: #2e0014;
+  background: #f1dabf;
+  margin-top: 20px;
+  border-radius: 10px;
+  width: 20%;
+  margin-left: 340px;
+  text-align: center;
+  padding: 10px;
+}
+@media (max-width:500px)  {
+  .contact {
+    width: 40%;
+    margin-left: 120px;
+  }
+}
+@media (max-width:768px) and (min-width: 501px)  {
+  .contact {
+    width: 20%;
+    margin-left: 270px;
+  }
+}
+@keyframes slide {
+  from {
+    margin-left: -50%;
+    opacity: 0;
+  }
+  to {
+    margin-right: 0;
+    opacity: 1;
   }
 }
