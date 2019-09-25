@@ -32,21 +32,72 @@ body {
 		width: 80%;
 		margin-left: 20px;
 	}
-}
-
-@media @mobile {
-	.header-img {
-		width: 100%;
-		position: relative;
-		text-align: center;
-		font-family: 'Crimson Text', serif;
-		color: @headerfont;
-		.mainimage {
-			border-radius: 30px;
-			border: double 6px @headerfont;
-			margin-top: 20px;
-			margin-bottom: 20px;
+	@media @mobile {
+		.header-img {
+			width: 100%;
+			position: relative;
+			text-align: center;
+			font-family: 'Crimson Text', serif;
+			color: @headerfont;
+			.mainimage {
+				border-radius: 30px;
+				border: double 6px @headerfont;
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
 		}
+	}
+}
+.secretcard {
+	display: flex;
+	@media @mobile {
+		flex-direction: column;
+	}
+	@media @tablet {
+		flex-direction: column;
+	}
+	.cardimage {
+		width: 60%;
+		border-radius: 60px;
+		border: double 6px @headerfont;
+		margin-top: 10px;
+		-webkit-filter: brightness(70%);
+		filter: brightness(60%);
+		@media @mobile {
+			border-radius: 30px;
+			width: 80%;
+			margin-left: 30px;
+		}
+		@media @tablet {
+			border-radius: 50px;
+			width: 50%;
+			margin-left: 150px;
+		}
+	}
+}
+h5 {
+	font-size: 62.5%;
+	font-size: 1.3rem;
+	font-family: 'Raleway', sans-serif;
+	color: @headerfont;
+	background: @cards;
+	padding: 45px;
+	margin-top: 10px;
+	margin-right: 8px;
+	border-radius: 200px;
+	text-align: center;
+	font-style: italic;
+	border: solid black 2px;
+	@media @mobile {
+		border-radius: 100px;
+		font-size: 1.0rem;
+	}
+	@media @tablet {
+		border-radius: 100px;
+		padding: 10px;
+		font-size: 1.3rem;
+		width: 70%;
+		margin-left: 60px;
 	}
 }
 
@@ -82,26 +133,22 @@ h2 {
 	background: @cards;
 	border-radius: 10px;
 	height: 300px;
-
-	.welcomep {
-		font-size: 62.5%;
-		font-size: 1.5rem;
-		font-family: 'Raleway', sans-serif;
-		margin-bottom: 30px;
-	}
-}
-@media @tablet {
-	.welcome {
+	@media @tablet {
 		width: 70%;
 		height: 350px;
 		margin-left: 50px;
 	}
-}
-@media @mobile {
-	.welcome {
+	@media @mobile {
 		width: 90%;
 		height: 450px;
 	}
+}
+
+.welcomep {
+	font-size: 62.5%;
+	font-size: 1.5rem;
+	font-family: 'Raleway', sans-serif;
+	margin-bottom: 30px;
 }
 
 .reviews {
@@ -111,50 +158,37 @@ h2 {
 	text-align: center;
 	background: @cards;
 	border-radius: 10px;
-	.reviewp {
-		font-size: 62.5%;
-		font-size: 1.0rem;
-		font-family: 'Raleway', sans-serif;
-	}
-}
-@media @mobile {
-	.reviews {
+	@media @mobile {
 		width: 90%;
 		height: 400px;
 	}
-}
-@media @tablet {
-	.reviews {
+	@media @tablet {
 		width: 70%;
 		margin-left: 50px;
 	}
 }
-p {
-	margin-top: 20px;
+.reviewp {
+	font-size: 62.5%;
+	font-size: 1.0rem;
+	font-family: 'Raleway', sans-serif;
 	font-style: italic;
 }
+
+p {
+	margin-top: 20px;
+}
 button {
-	background: @button;
-	color: @cards;
-	vertical-align: top;
-	padding: 8px 44px;
-	font-size: 17px;
-	border: 1px solid @headerfont;
-	border-radius: 10px;
-	cursor: pointer;
-	animation: bounce 1s infinite alternate;
-	-webkit-animation: bounce 1s infinite alternate;
+	.custom-btn();
 	&:hover {
 		background: white;
 		color: @button;
-	}
-}
-
-@keyframes bounce {
-	from {
-		margin-top: 10px;
-	}
-	to {
-		margin-top: -2px;
+		@keyframes bounce {
+			from {
+				margin-top: 10px;
+			}
+			to {
+				margin-top: -2px;
+			}
+		}
 	}
 }
